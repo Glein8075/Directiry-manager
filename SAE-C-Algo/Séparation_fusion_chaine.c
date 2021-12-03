@@ -43,7 +43,6 @@ char separation(char chaine[300])
         j++;
     }while(chaine[i]!='\0');
     return tab;
-
 }
 
 /*int main()
