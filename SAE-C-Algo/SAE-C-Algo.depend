@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1638459585 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1637226271 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
+	<stdio.h>
+	<stdlib.h>
+
+1638459869 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage annuaire.c
+	<stdio.h>
+	<stdlib.h>
+	"en-tete.h"
+
+1638459475 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\en-tete.h
+
+1638459923 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_fusion_chaine.c
+	<stdio.h>
+	<string.h>
+	"en-tete.h"
+
