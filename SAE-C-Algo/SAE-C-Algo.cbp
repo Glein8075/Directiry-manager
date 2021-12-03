@@ -43,6 +43,9 @@
 		<Unit filename="Séparation_fusion_chaine.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Tri indirect.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="en-tete.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />

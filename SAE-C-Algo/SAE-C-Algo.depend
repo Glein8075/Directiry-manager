@@ -19,10 +19,37 @@
 	<string.h>
 	"en-tete.h"
 
+<<<<<<< HEAD
 1638526511 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
 	<stdio.h>
 	<stdlib.h>
 
 1638526470 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
 	<stdio.h>
+=======
+1638524553 source:c:\users\melvi\onedrive\documents\melvin\cours iut\cours c\sae algo c\sae_c_algo\sae-c-algo\affichage annuaire.c
+	<stdio.h>
+	<stdlib.h>
+	"en-tete.h"
+
+1638524553 c:\users\melvi\onedrive\documents\melvin\cours iut\cours c\sae algo c\sae_c_algo\sae-c-algo\en-tete.h
+
+1638524553 source:c:\users\melvi\onedrive\documents\melvin\cours iut\cours c\sae algo c\sae_c_algo\sae-c-algo\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1638524553 source:c:\users\melvi\onedrive\documents\melvin\cours iut\cours c\sae algo c\sae_c_algo\sae-c-algo\modification.c
+	<stdio.h>
+	<stdlib.h>
+
+1638524553 source:c:\users\melvi\onedrive\documents\melvin\cours iut\cours c\sae algo c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
+	<stdio.h>
+	<stdlib.h>
+	"en-tete.h"
+
+1638524553 source:c:\users\melvi\onedrive\documents\melvin\cours iut\cours c\sae algo c\sae_c_algo\sae-c-algo\séparation_fusion_chaine.c
+	<stdio.h>
+	<string.h>
+	"en-tete.h"
+>>>>>>> 08d0285abafcda41e3f6bbf65aef9bca32ae250f
 
