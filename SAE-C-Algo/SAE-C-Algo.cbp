@@ -40,7 +40,7 @@
 		<Unit filename="Sauvegarde_fichier.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Séparation_fusion_chaine.c">
+		<Unit filename="Séparation_chaine.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Tri indirect.c">

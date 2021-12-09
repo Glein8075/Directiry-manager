@@ -1,14 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct
-{
-    char nom[20];
-    char prenom[20];
-    char numtel[12];
-}client;
+#include "en-tete.h"
 
 int main()
+{
+    CLIENT tab[2];
+    char chaine1[300]="Adelaide,Benoit,MARSEILLE,13012,04.16.23.32.39,adelaide.benoit@server.fr,";
+    char chaine2[300]=",Dupuy,LYON,69008,04.50.03.11.01,adele.dupuy@server.fr,";
+    tab[1]=separation(chaine1);
+    tab[2]=separation(chaine2);
+    printf("\n %s,%s,%s,%s,%s,%s,%s \n",tab[1].prenom,tab[1].nom,tab[1].ville,tab[1].codePostal,tab[1].tel,tab[1].mail,tab[1].emploi);
+    printf("\n %s,%s,%s,%s,%s,%s,%s \n",tab[2].prenom,tab[2].nom,tab[2].ville,tab[2].codePostal,tab[2].tel,tab[2].mail,tab[2].emploi);
+    return 0;
+}
+
+/**int main()
 {
 
 
@@ -36,5 +42,5 @@ int main()
     }while(choix!= '5');
 
     return 0;
-}
+}*/
 
