@@ -2,11 +2,11 @@
 #include <string.h>
 #include "en-tete.h"
 
-void rech_nom(int t1, CLIENT tab[t1], char mot, int client[t1])
+void rech_nom(int taille, CLIENT tab[taille], char mot, int client[taille])
 {
     int i,j,k,milieu;
     i=0;
-    j=t1;
+    j=taille;
     k=0;
     while (i<j)
     {
@@ -19,11 +19,11 @@ void rech_nom(int t1, CLIENT tab[t1], char mot, int client[t1])
     }
 }
 
-void rech_prenom(int t1, CLIENT tab[t1], char mot,int client[t1])
+void rech_prenom(int taille, CLIENT tab[taille], char mot,int client[taille])
 {
     int i,j,k,milieu;
     i=0;
-    j=t1;
+    j=taille;
     k=0;
     while (i<j)
     {
@@ -36,11 +36,11 @@ void rech_prenom(int t1, CLIENT tab[t1], char mot,int client[t1])
     }
 }
 
-void rech_ville(int t1, CLIENT tab[t1], char mot,int client[t1])
+void rech_ville(int taille, CLIENT tab[taille], char mot,int client[taille])
 {
     int i,j,k,milieu;
     i=0;
-    j=t1;
+    j=taille;
     k=0;
     while (i<j)
     {
@@ -53,11 +53,11 @@ void rech_ville(int t1, CLIENT tab[t1], char mot,int client[t1])
     }
 }
 
-void rech_codePostal(int t1, CLIENT tab[t1], char mot,int client[t1])
+void rech_codePostal(int taille, CLIENT tab[taille], char mot,int client[taille])
 {
     int i,j,k,milieu;
     i=0;
-    j=t1;
+    j=taille;
     k=0;
     while (i<j)
     {
@@ -70,11 +70,11 @@ void rech_codePostal(int t1, CLIENT tab[t1], char mot,int client[t1])
     }
 }
 
-void rech_tel(int t1, CLIENT tab[t1], char mot,int client[t1])
+void rech_tel(int taille, CLIENT tab[taille], char mot,int client[taille])
 {
     int i,j,k,milieu;
     i=0;
-    j=t1;
+    j=taille;
     k=0;
     while (i<j)
     {
@@ -87,11 +87,11 @@ void rech_tel(int t1, CLIENT tab[t1], char mot,int client[t1])
     }
 }
 
-void rech_mail(int t1, CLIENT tab[t1], char mot,int client[t1])
+void rech_mail(int taille, CLIENT tab[taille], char mot,int client[taille])
 {
     int i,j,k,milieu;
     i=0;
-    j=t1;
+    j=taille;
     k=0;
     while (i<j)
     {
@@ -104,11 +104,11 @@ void rech_mail(int t1, CLIENT tab[t1], char mot,int client[t1])
     }
 }
 
-void rech_emploi(int t1, CLIENT tab[t1], char mot, int client[t1])
+void rech_emploi(int taille, CLIENT tab[taille], char mot, int client[taille])
 {
     int i,j,k,milieu;
     i=0;
-    j=t1;
+    j=taille;
     k=0;
     while (i<j)
     {
@@ -121,35 +121,35 @@ void rech_emploi(int t1, CLIENT tab[t1], char mot, int client[t1])
     }
 }
 
-void recherche(int t1, CLIENT tab[t1], char mot, int choix, int client[t1])
+void recherche(int taille, CLIENT tab[taille], char mot, int choix, int client[taille])
 {
     if(choix==1)
     {
-        rech_prenom(int t1, CLIENT tab[t1], char mot, int client[t1]);
+        rech_prenom(int taille, CLIENT tab[taille], char mot, int client[taille]);
     }
     else if(choix==2)
     {
-        rech_prenom(int t1, CLIENT tab[t1], char mot, int client[t1]);
+        rech_nom(int taille, CLIENT tab[taille], char mot, int client[taille]);
     }
     else if(choix==3)
     {
-        rech_prenom(int t1, CLIENT tab[t1], char mot, int client[t1]);
+        rech_ville(int taille, CLIENT tab[taille], char mot, int client[taille]);
     }
     else if(choix==4)
     {
-        recherche_prenom(int t1, CLIENT tab[t1], char mot, int client[t1]);
+        recherche_codePostal(int taille, CLIENT tab[taille], char mot, int client[taille]);
     }
     else if(choix==5)
     {
-        rech_prenom(int t1, CLIENT tab[t1], char mot, int client[t1]);
+        rech_tel(int taille, CLIENT tab[taille], char mot, int client[taille]);
     }
     else if(choix==6)
     {
-        rech_prenom(int t1, CLIENT tab[t1], char mot, int client[t1]);
+        rech_mail(int taille, CLIENT tab[taille], char mot, int client[taille]);
     }
     else
     {
-        rech_prenom(int t1, CLIENT tab[t1], char mot, int client[t1]);
+        rech_emploi(int taille, CLIENT tab[taille], char mot, int client[taille]);
     }
 
 }

@@ -4,31 +4,39 @@
 #include "en-tete.h"
 
 /**
-:entree ad:tableau de CLIENT
-:entre/sortie  ai:tableau de "x" 2 dimensions
+:entree tab:tableau de CLIENT
+:entre/sortie indice:tableau d'int
+:entre taille: int
+:Précondition
+:tab est un tableau de "taille" element
+:et indice a la même taille que tab
+:Postcondition
+: indice est trier dans l'ordre des éléments de tab qu'ils représentent
 :Declaration
 :i,j:int
 :ipetit:int
 **/
 
-/**void tri_indirect(int t1, CLIENT ad[t1], int ai[7])
+void tri_indirect_nom(int taille, CLIENT tab[taille], int indice[taille])
 {
-        int i=1,ipetit,j;
-        while (i <= t1)
+        int i,j;
+        CLIENT petit;
+        i=1;
+        while (i <= taille)
         {
-            ipetit=ai[i];
+            petit=tab[indice[i]];
             j=i-1;
-            while (j >= 0 && ad[ipetit] < ad[ai[j])
+            while (j >= 0 && petit < tab[indice[j]])
             {
-                ai[j+1]=ai[j];
-                j++;
+                indice[j+1]=indice[j];
+                j--;
             }
-            ai[j+1]=ipetit;
+            indice[j+1]=indice[i];
             i++;
         }
 }
 
-int main()
+/**int main()
 {
     ["","Becker","PARIS","75002","01.81.30.33.94","adelaide.becker@server.fr","comptable"]
     ["Benoit","Lambert","","","04.61.87.21.94","benoit.lambert@server.fr","chef d'entreprise"]
