@@ -42,6 +42,8 @@ void sauvegarde(int taille, CLIENT tab[taille],FILE*fichier);
 :Précondition
 :tab possede "taille" éléments
 :mot correspond à ce que recherche l'utilisateur
+:Postcondition:
+:le tableau "client" contient les indices des clients correspondant au mot recherché
 */
 void recherche(int taille, CLIENT tab[taille], char mot[20], int choix, int client[taille]);
 
