@@ -1,20 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "en-tete.h"
-#define annu "annuaire5000.csv"
 
-void affichage(int t1, int t2, char tab[t1][t2])
+void affichage(int taille, CLIENT tab[taille])
 {
-    int i,j;
+    int i;
     i=0;
-    while(i<t1)
+    while(i<taille)
     {
-        j=0;
-        while(j<t2)
-        {
-            printf("%s", tab[i][j]);
-            j++;
-        }
+        printf("%d: %s,%s,%s,%s,%s,%s,%s \n",i,tab[i].prenom,tab[i].nom,tab[i].ville,tab[i].codePostal,tab[i].tel,tab[i].mail,tab[i].emploi);
         i++;
     }
 }

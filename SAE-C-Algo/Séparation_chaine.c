@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "en-tete.h"
-#define annu "annuaire5000.csv"
-
 
 CLIENT separation(char chaine[300])
 {

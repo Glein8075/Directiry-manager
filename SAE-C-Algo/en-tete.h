@@ -63,4 +63,15 @@ void recherche(int taille, CLIENT tab[taille], char mot[20], int choix, int clie
 
 void tri_indirect(int taille, CLIENT tab[taille], int indice[taille]);
 
+/**
+:entree/sortie tab:tableau de CLIENT
+:entre taille: int
+:Précondition
+:tab est un tableau de "taille" element
+:Declaration
+:i:int
+**/
+
+void affichage(int taille, CLIENT tab[taille]);
+
 #endif // EN-TETE_H_INCLUDED

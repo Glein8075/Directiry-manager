@@ -1,23 +1,74 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "en-tete.h"
+#define annu "annuaire5000.csv"
 
 int main()
 {
+//test ouverture fichier et création du tableau de structure
+  /*int i;
+    CLIENT tab[taille];
+    char chaine[300];
+    FILE * fic = fopen(annu,"r+");
+    if(fic==NULL)
+    {
+        printf("Echec Ouverture Fichier");
+        exit(EXIT_FAILURE);
+    }
+    i=0;
+    do
+    {
+        fgets(chaine,300,fic);
+        printf("%s\n",chaine);
+        tab[i]=separation(chaine);
+        printf("c'est fait\n");
+        i++;
+    }
+    while(! feof(fic));
+    fclose(fic);
+    affichage(taille, tab);*/
+
+//test fonction affichage
     CLIENT tab[2];
     char chaine1[300]="Adelaide,Benoit,MARSEILLE,13012,04.16.23.32.39,adelaide.benoit@server.fr,";
     char chaine2[300]=",Dupuy,LYON,69008,04.50.03.11.01,adele.dupuy@server.fr,";
-    tab[1]=separation(chaine1);
-    tab[2]=separation(chaine2);
-    printf("\n %s,%s,%s,%s,%s,%s,%s \n",tab[1].prenom,tab[1].nom,tab[1].ville,tab[1].codePostal,tab[1].tel,tab[1].mail,tab[1].emploi);
-    printf("\n %s,%s,%s,%s,%s,%s,%s \n",tab[2].prenom,tab[2].nom,tab[2].ville,tab[2].codePostal,tab[2].tel,tab[2].mail,tab[2].emploi);
+    tab[0]=separation(chaine1);
+    tab[1]=separation(chaine2);
+    affichage(2,tab);
+    int choix;
+    char mot[20];
+    int client[2];
+//test fonction de recherche
+    /*printf("saisissez le nombre correspondant votre recherche: ");
+    scanf("%d",&choix);*/
+
+    /*printf("saisissez le nom recherche: ");
+    fgets(mot,20,stdin);*/
+    recherche(2,tab,"Dupuy",2,client);
+    printf("le client n°%d possede l'information Dupuy", client[0]);
     return 0;
 }
 
+
+
 /**int main()
 {
-
-
+    int i;
+    CLIENT tab[5000];
+    char chaine[200];
+    FILE * fic = fopen(annu,"r+");
+    if(fic==NULL)
+    {
+        printf("Echec Ouverture Fichier");
+        exit(EXIT_FAILURE);
+    }
+    i=0;
+    do
+    {
+        fgets(chaine, 200, fic);
+        tab[i]=separation(chaine);
+    }while(! feof(fic));
+    fclose(fic);
 
     int choix;
     do

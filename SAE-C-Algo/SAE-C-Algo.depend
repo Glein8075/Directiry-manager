@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1639042773 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
+1641148280 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"en-tete.h"
@@ -9,12 +9,12 @@
 	<string.h>
 	"en-tete.h"
 
-1638459869 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage annuaire.c
+1641146676 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage annuaire.c
 	<stdio.h>
 	<stdlib.h>
 	"en-tete.h"
 
-1639046181 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\en-tete.h
+1641146690 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\en-tete.h
 
 1639042737 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_fusion_chaine.c
 	<stdio.h>
@@ -23,13 +23,15 @@
 
 1638526498 D
 
-1639042216 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
+1641144409 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
 	<stdio.h>
 	<stdlib.h>
 	"en-tete.h"
 
-1639042115 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
+1641148239 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
 	<stdio.h>
+	<string.h>
+	"en-tete.h"
 
 1638526470 
 
@@ -60,13 +62,13 @@
 
 1638524553 0285abafcda41e3f6bbf65aef9bca32ae250f
 
-1639042814 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri indirect.c
+1641146681 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri indirect.c
 	<stdlib.h>
 	<string.h>
 	<stdio.h>
 	"en-tete.h"
 
-1639042737 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_chaine.c
+1641143658 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_chaine.c
 	<stdio.h>
 	<string.h>
 	"en-tete.h"

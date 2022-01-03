@@ -17,6 +17,7 @@ int main()
     do
     {
         fgets(chaine[i],300,fic);
+        printf("%s\n",chaine[i]);
         i++;
     }
     while(! feof(fic));

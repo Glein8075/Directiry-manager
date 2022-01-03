@@ -26,7 +26,7 @@ void tri_indirect_nom(int taille, CLIENT tab[taille], int indice[taille])
         {
             petit=tab[indice[i]];
             j=i-1;
-            while (j >= 0 && petit < tab[indice[j]])
+            while (j >= 0 && petit.nom < tab[indice[j]].nom)
             {
                 indice[j+1]=indice[j];
                 j--;

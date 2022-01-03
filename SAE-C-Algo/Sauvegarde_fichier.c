@@ -29,6 +29,6 @@ void sauvegarde(int t1, CLIENT tab[t1],FILE*fichier)
         fprintf(fic,"%s",tab[i].emploi);
         i++;
     }
-    while(i<5000);
+    while(i<t1);
     fclose(fic);
 }
