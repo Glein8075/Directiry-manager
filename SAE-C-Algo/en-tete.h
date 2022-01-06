@@ -23,29 +23,29 @@ typedef struct
 CLIENT separation(char chaine[300]);
 
 /**
-:entre tab: tableau de CLIENT
-:entre t1, t2 int
+:entre/sortie tab: tableau de CLIENT
+:entre taille int
 :entre/sortie fichier: str
 :Précondition:
-:t1 et t2 sont les tailles respectives du tableau à 2 dimentions tab
+:taille est la taille du tableau de structure tab
 :Postcondition:
-:chaque information d'une ligne de fichier
+:chaque element de tab correspond une ligne de fichier
 */
-void sauvegarde(int taille, CLIENT tab[taille],FILE*fichier);
+void sauvegarde(int taille, CLIENT tab[taille],char fichier[40]);
 
 /**
 :entrée tab: tableau de CLIENT
 :entrée/sortie client tableau d'int
 :entrée taille: int
-:entrée mot: chaine de caractère
-:entre: choix: int
 :Précondition
 :tab possede "taille" éléments
-:mot correspond à ce que recherche l'utilisateur
 :Postcondition:
 :le tableau "client" contient les indices des clients correspondant au mot recherché
+:Déclaration
+:choix: int
+:mot: str
 */
-void recherche(int taille, CLIENT tab[taille], char mot[20], int choix, int client[taille]);
+void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[taille]);
 
 /**
 :entree tab:tableau de CLIENT
@@ -72,6 +72,6 @@ void tri_indirect(int taille, CLIENT tab[taille], int indice[taille]);
 :i:int
 **/
 
-void affichage(int taille, CLIENT tab[taille]);
+void affichage(int taille, CLIENT tab[taille],int indice[taille]);
 
 #endif // EN-TETE_H_INCLUDED

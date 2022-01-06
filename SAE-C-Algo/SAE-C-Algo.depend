@@ -1,20 +1,20 @@
 # depslib dependency file v1.0
-1641148280 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
+1641463107 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"en-tete.h"
 
-1639045858 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
+1641388369 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
 	<stdio.h>
 	<string.h>
 	"en-tete.h"
 
-1641146676 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage annuaire.c
+1641404503 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage annuaire.c
 	<stdio.h>
 	<stdlib.h>
 	"en-tete.h"
 
-1641146690 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\en-tete.h
+1641462622 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\en-tete.h
 
 1639042737 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_fusion_chaine.c
 	<stdio.h>
@@ -23,12 +23,12 @@
 
 1638526498 D
 
-1641144409 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
+1641387604 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
 	<stdio.h>
 	<stdlib.h>
 	"en-tete.h"
 
-1641148239 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
+1641462757 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
 	<stdio.h>
 	<string.h>
 	"en-tete.h"
@@ -62,14 +62,20 @@
 
 1638524553 0285abafcda41e3f6bbf65aef9bca32ae250f
 
-1641146681 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri indirect.c
+1641464314 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri indirect.c
 	<stdlib.h>
 	<string.h>
 	<stdio.h>
 	"en-tete.h"
 
-1641143658 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_chaine.c
+1641324901 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_chaine.c
 	<stdio.h>
+	<string.h>
+	"en-tete.h"
+
+1641464940 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\filtre.c
+	<stdio.h>
+	<stdlib.h>
 	<string.h>
 	"en-tete.h"
 

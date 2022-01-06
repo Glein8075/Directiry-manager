@@ -2,13 +2,7 @@
 #include <stdlib.h>
 #include "en-tete.h"
 
-/**
-entre tab: tableau de structure
-entre/sortie fichier: FILE
-Postcondition:
-chaque ligne de fichier contient un sous tableau de tab
-*/
-void sauvegarde(int t1, CLIENT tab[t1],FILE*fichier)
+void sauvegarde(int taille, CLIENT tab[taille], char fichier[40])
 {
     int i;
     FILE * fic = fopen(fichier,"w+");
@@ -20,15 +14,16 @@ void sauvegarde(int t1, CLIENT tab[t1],FILE*fichier)
     i=0;
     do
     {
-        fprintf(fic,"%s",tab[i].prenom);
-        fprintf(fic,"%s",tab[i].nom);
-        fprintf(fic,"%s",tab[i].ville);
-        fprintf(fic,"%s",tab[i].codePostal);
-        fprintf(fic,"%s",tab[i].tel);
-        fprintf(fic,"%s",tab[i].mail);
+        fprintf(fic,"%s,",tab[i].prenom);
+        fprintf(fic,"%s,",tab[i].nom);
+        fprintf(fic,"%s,",tab[i].ville);
+        fprintf(fic,"%s,",tab[i].codePostal);
+        fprintf(fic,"%s,",tab[i].tel);
+        fprintf(fic,"%s,",tab[i].mail);
         fprintf(fic,"%s",tab[i].emploi);
+        fprintf(fic,"\n");
         i++;
     }
-    while(i<t1);
+    while(i<taille);
     fclose(fic);
 }
