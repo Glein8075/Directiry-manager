@@ -33,7 +33,6 @@ void tri_indirect_nom(int taille, CLIENT tab[taille],int indice[taille])
         }
         indice[j+1]=i;
         i++;
-        printf("\n");
     }
 }
 
@@ -53,7 +52,6 @@ void tri_indirect_prenom(int taille,CLIENT tab[taille],int indice[taille])
         }
         indice[j+1]=i;
         i++;
-        printf("\n");
     }
 }
 

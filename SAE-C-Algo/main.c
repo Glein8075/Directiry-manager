@@ -37,16 +37,23 @@ int main()
     scanf("%d",&choix);
 
     printf("saisissez le nom recherche: ");
-    fgets(mot,20,stdin);*/
-    /*int client[5];
+    fgets(mot,20,stdin);
+    int client[5];
     recherche(5,tab,client,indice);
-    printf("le client numero %d possede l'information saisi", client[0]);*/
+    i=0;
+    while(i<5)
+    {
+        printf("%d,", client[i]+1);
+        i++;
+    }
 //test modification
     /*modification(5,tab);
-    printf("modif effectue: %s\n", tab[5].prenom);*/
+    printf("modif effectue: %s\n", tab[5].prenom);
 //test tri
-    tri_indirect(5,tab,indice);
-    affichage(5,tab,indice);
+    /*tri_indirect(5,tab,indice);
+    affichage(5,tab,indice);*/
+//test filtre
+    filtre(5,tab,indice);
     return 0;
 }
 
@@ -72,17 +79,24 @@ int main()
     do
     {
         fgets(chaine, 200, fic);
-        tab=realloc(tab,sizeof(CLIENT));
+        tab=realloc(tab,i*sizeof(CLIENT));
         tab[i]=separation(chaine);
         printf("c.prenom = %s c.nom = %s c.codePostal = %s c.ville = %s c.tel = %s c.mail = %s c.emploi = %s \n",tab[i].prenom,tab[i].nom,tab[i].codePostal,tab[i].ville,tab[i].tel,tab[i].mail,tab[i].emploi);
         taille++;
         i++;
     }while(! feof(fic));
     fclose(fic);
-    affichage(taille,tab);
+    i=0;
+    int indice[taille];
+    while(i<taille)
+    {
+        indice[i]=i;
+        printf("%d",indice[i]);
+        i++;
+    }
+    affichage(taille,tab,indice);
     int choix;
     int client[taille];
-    int indice[taille];
     do
     {
         printf("MENU\n\n");
@@ -99,15 +113,15 @@ int main()
         {
             case 1: //ajout(taille,tab);
                     break;
-            case 2: affichage(taille,tab);
+            case 2: affichage(taille,tab,indice);
                     break;
             case 3: supprimer(taille,tab);
                     break;
-            case 4: recherche(taille,tab,client);
+            case 4: recherche(taille,tab,client,indice);
                     break;
             case 5: tri_indirect(taille,tab,indice);
                     break;
-            case 5: sauvegarde(taille,tab,annu);
+            case 6: sauvegarde(taille,tab,indice,annu);
                     break;
             case 7: break;
             default : printf("Erreur de saisie !\n" );

@@ -13,7 +13,9 @@ void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],i
         milieu=(i+j)/2;
         if (strcmp(tab[indice[milieu]].nom,mot)==0)
         {
+
             client[k]=milieu;
+            printf("%d",client[k]);
             k++;
         }
         if (strcmp(tab[indice[milieu]].nom,mot)<0)
@@ -179,26 +181,27 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
         //faire un case
     switch(choix)
     {
-        case 1: //{tri_indirect_prenom(taille,tab,indice);
-                rech_prenom(taille,tab,mot,client,indice);//}
+        case 1: {tri_indirect_prenom(taille,tab,indice);
+                rech_prenom(taille,tab,mot,client,indice);}
         break;
-        case 2: //{tri_indirect_prenom(taille,tab,indice);
-                rech_nom(taille,tab,mot,client,indice);//}
+        case 2: {tri_indirect_prenom(taille,tab,indice);
+                affichage(taille,tab,indice);
+                rech_nom(taille,tab,mot,client,indice);}
         break;
-        case 3: //{tri_indirect_prenom(taille,tab,indice);
-                rech_ville(taille,tab,mot,client,indice);//}
+        case 3: {tri_indirect_prenom(taille,tab,indice);
+                rech_ville(taille,tab,mot,client,indice);}
         break;
-        case 4: //{tri_indirect_prenom(taille,tab,indice);
-                rech_codePostal(taille,tab,mot,client,indice);//}
+        case 4: {tri_indirect_prenom(taille,tab,indice);
+                rech_codePostal(taille,tab,mot,client,indice);}
         break;
-        case 5: //{tri_indirect_prenom(taille,tab,indice);
-                rech_tel(taille,tab,mot,client,indice);//}
+        case 5: {tri_indirect_prenom(taille,tab,indice);
+                rech_tel(taille,tab,mot,client,indice);}
         break;
-        case 6: //{tri_indirect_prenom(taille,tab,indice);
-                rech_mail(taille,tab,mot,client,indice);//}
+        case 6: {tri_indirect_prenom(taille,tab,indice);
+                rech_mail(taille,tab,mot,client,indice);}
         break;
-        case 7: //{tri_indirect_prenom(taille,tab,indice);
-                rech_emploi(taille,tab,mot,client,indice);//}
+        case 7: {tri_indirect_prenom(taille,tab,indice);
+                rech_emploi(taille,tab,mot,client,indice);}
         break;
         case 8: break;
         default: printf("erreur de saisie \n");

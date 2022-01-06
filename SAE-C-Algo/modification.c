@@ -1,43 +1,44 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "en-tete.h"
 
-void modif_nom(int taille, CLIENT tab[taille], char modif[30], int choix)
+void modif_nom(int taille, CLIENT tab[taille],int indice[taille], char modif[30], int choix)
 {
-    strcpy(tab[choix-1].nom,modif);
+    strcpy(tab[indice[choix-1]].nom,modif);
 }
 
-void modif_mail(int taille, CLIENT tab[taille], char modif[30], int choix)
+void modif_mail(int taille, CLIENT tab[taille],int indice[taille], char modif[30], int choix)
 {
-    strcpy(tab[choix].nom,modif);
+    strcpy(tab[indice[choix-1]].nom,modif);
 }
 
-void modif_prenom(int taille, CLIENT tab[taille], char modif[30], int choix)
+void modif_prenom(int taille, CLIENT tab[taille],int indice[taille], char modif[30], int choix)
 {
-    strcpy(tab[choix].prenom,modif);
+    strcpy(tab[indice[choix-1]].prenom,modif);
 }
 
-void modif_ville(int taille, CLIENT tab[taille], char modif[30], int choix)
+void modif_ville(int taille, CLIENT tab[taille],int indice[taille], char modif[30], int choix)
 {
-    strcpy(tab[choix].ville,modif);
+    strcpy(tab[indice[choix-1]].ville,modif);
 }
 
-void modif_codePostal(int taille, CLIENT tab[taille], char modif[30], int choix)
+void modif_codePostal(int taille, CLIENT tab[taille],int indice[taille], char modif[30], int choix)
 {
-    strcpy(tab[choix].codePostal,modif);
+    strcpy(tab[indice[choix-1]].codePostal,modif);
 }
 
-void modif_tel(int taille, CLIENT tab[taille], char modif[30], int choix)
+void modif_tel(int taille, CLIENT tab[taille],int indice[taille], char modif[30], int choix)
 {
-    strcpy(tab[choix].tel,modif);
+    strcpy(tab[indice[choix-1]].tel,modif);
 }
 
-void modif_emploi(int taille, CLIENT tab[taille], char modif[30], int choix)
+void modif_emploi(int taille, CLIENT tab[taille],int indice[taille], char modif[30], int choix)
 {
-    strcpy(tab[choix].emploi,modif);
+    strcpy(tab[indice[choix-1]].emploi,modif);
 }
 
-void modification(int taille, CLIENT tab[taille])
+void modification(int taille, CLIENT tab[taille],int indice[taille])
 {
     int c1,c2;
     char modif[30];
@@ -60,25 +61,56 @@ void modification(int taille, CLIENT tab[taille])
     fgets(modif,30,stdin);
     switch(c2)
     {
-        case 1: modif_prenom(taille,tab,modif,c1);
+        case 1: modif_prenom(taille,tab,indice,modif,c1);
         break;
-        case 2: modif_nom(taille,tab,modif,c1);
+        case 2: modif_nom(taille,tab,indice,modif,c1);
         break;
-        case 3: modif_ville(taille,tab,modif,c1);
+        case 3: modif_ville(taille,tab,indice,modif,c1);
         break;
-        case 4: modif_codePostal(taille,tab,modif,c1);
+        case 4: modif_codePostal(taille,tab,indice,modif,c1);
         break;
-        case 5: modif_tel(taille,tab,modif,c1);
+        case 5: modif_tel(taille,tab,indice,modif,c1);
         break;
-        case 6: modif_mail(taille,tab,modif,c1);
+        case 6: modif_mail(taille,tab,indice,modif,c1);
         break;
-        case 7: modif_emploi(taille,tab,modif,c1);
+        case 7: modif_emploi(taille,tab,indice,modif,c1);
         break;
         case 8: break;
         default: printf("erreur de saisie \n");
     }
 }
-void supprimer(int taille, CLIENT tab[taille])
-{
 
+void ajouter(int taille, CLIENT tab[taille], int indice[taille])
+{
+    taille++;
+    tab=realloc(tab,taille*sizeof(CLIENT));
+    indice=realloc(indice,taille*sizeof(int));
+    indice[taille-1]=taille-1;
+    printf("saisissez un nom: ");
+    fgets(tab[indice[taille]].nom,20,stdin);
+    printf("saisissez un prenom: ");
+    fgets(tab[indice[taille]].prenom,20,stdin);
+    printf("saisissez une ville (en majuscule): ");
+    fgets(tab[indice[taille]].ville,20,stdin);
+    printf("saisissez un code postal: ");
+    fgets(tab[indice[taille]].codePostal,20,stdin);
+    printf("saisissez un numero de telephone sous forme(XX.XX.XX.XX.XX): ");
+    fgets(tab[indice[taille]].tel,20,stdin);
+    printf("saisissez une adresse mail: ");
+    fgets(tab[indice[taille]].mail,20,stdin);
+    printf("saisissez un emploi/metier: ");
+    fgets(tab[indice[taille]].emploi,20,stdin);
+}
+
+
+void supprimer(int taille, CLIENT tab[taille],int indice[taille])
+{
+    int choix,i;
+    printf("quel client voulez-vous supprimer ? (saisissez son numéro)");
+    scanf("%d",&choix);
+    for (i = choix - 1; i < taille - 1; i++)
+         tab[i] = tab[i+1];
+    taille--;
+    tab=realloc(tab,taille*sizeof(CLIENT));
+    indice=realloc(indice,taille*sizeof(int));
 }

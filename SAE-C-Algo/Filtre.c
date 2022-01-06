@@ -8,6 +8,7 @@ void filtre_nom(int taille, CLIENT tab[taille],int indice[taille], char motif[50
     int i;
     if(motif!=NULL)
     {
+        printf("motif n'est pas NULL\n");
         if(strcmp(motif,"M")>0||strcmp(motif,"m")>0||strcmp(motif,"04")>0)
         {
             i=taille-1;
@@ -34,7 +35,11 @@ void filtre_nom(int taille, CLIENT tab[taille],int indice[taille], char motif[50
     else
     {
         i=0;
-        while(i<taille)printf("%s",tab[indice[i]].nom);
+        while(i<taille)
+        {
+            printf("%s\n",tab[indice[i]].nom);
+            i++;
+        }
     }
 }
 
@@ -71,10 +76,10 @@ void filtre_emploi(int taille, CLIENT tab[taille],int indice[taille], char motif
 void filtre(int taille, CLIENT tab[taille],int indice[taille])
 {
     int choix;
-    char rep=NULL;
-    char motif[50];
+    char rep;
+    char *motif=NULL;
     printf("FILTRE\n\n");
-    printf("Vous triez par: \n");
+    printf("Vous flitrez par: \n");
     printf("prenom................... 1\n");
     printf("nom ..................... 2\n");
     printf("ville ................... 3\n");
@@ -89,16 +94,20 @@ void filtre(int taille, CLIENT tab[taille],int indice[taille])
     do{
         printf("voulez vous un motif de filtre ? (O/N)");
         scanf("%c",&rep);
-    }while(rep!='O' || rep!='N');
-    getchar();
-    printf("saisissez un motif de filtre");
-    fgets(motif,50,stdin);
+        getchar();
+    }while(rep!='O' && rep!='N');
+    if(rep=='O')
+    {
+        motif=calloc(50,sizeof(char));
+        printf("saisissez un motif de filtre");
+        fgets(motif,50,stdin);
+    }
     switch(choix)
     {
         case 1: {tri_indirect_prenom(taille,tab,indice);
                 filtre_prenom(taille,tab,indice,motif);}
         break;
-        case 2: {tri_indirect_nom(taille,tab);
+        case 2: {tri_indirect_nom(taille,tab,indice);
                 filtre_nom(taille,tab,indice,motif);}
         break;
         case 3: {tri_indirect_ville(taille,tab,indice);

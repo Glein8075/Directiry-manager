@@ -5,8 +5,8 @@ typedef struct
     char prenom[20];
     char nom[20];
     char ville[20];
-    char codePostal[6];
-    char tel[15];
+    char codePostal[8];
+    char tel[18];
     char mail[50];
     char emploi[50];
 }CLIENT;
@@ -24,23 +24,27 @@ CLIENT separation(char chaine[300]);
 
 /**
 :entre/sortie tab: tableau de CLIENT
+:entre/sortie indice: tableau de int
 :entre taille int
-:entre/sortie fichier: str
+:entre fichier: str
 :Précondition:
 :taille est la taille du tableau de structure tab
+:indice est unn tableau contenant les indices de tab trié en fonction des éléments de tab
 :Postcondition:
 :chaque element de tab correspond une ligne de fichier
 */
-void sauvegarde(int taille, CLIENT tab[taille],char fichier[40]);
+void sauvegarde(int taille, CLIENT tab[taille],int indice[taille],char fichier[40]);
 
 /**
-:entrée tab: tableau de CLIENT
+:entrée/sortie tab: tableau de CLIENT
 :entrée/sortie client tableau d'int
+:entrée/sortie indice: tableau d'int
 :entrée taille: int
 :Précondition
 :tab possede "taille" éléments
 :Postcondition:
 :le tableau "client" contient les indices des clients correspondant au mot recherché
+:indice est un tableau contenant les indices de tab trié en fonction des éléments de tab
 :Déclaration
 :choix: int
 :mot: str
@@ -48,7 +52,7 @@ void sauvegarde(int taille, CLIENT tab[taille],char fichier[40]);
 void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[taille]);
 
 /**
-:entree tab:tableau de CLIENT
+:entree/sortie tab:tableau de CLIENT
 :entre/sortie indice:tableau d'int
 :entre taille: int
 :Précondition
@@ -65,13 +69,21 @@ void tri_indirect(int taille, CLIENT tab[taille], int indice[taille]);
 
 /**
 :entree/sortie tab:tableau de CLIENT
+:entre/sortie indice: tableau d'int
 :entre taille: int
 :Précondition
 :tab est un tableau de "taille" element
+:indice est unn tableau contenant les indices de tab trié en fonction des éléments de tab
 :Declaration
 :i:int
 **/
 
 void affichage(int taille, CLIENT tab[taille],int indice[taille]);
+
+void modification(int taille, CLIENT tab[taille],int indice[taille]);
+
+void ajouter(int taille, CLIENT tab[taille], int indice[taille]);
+
+void supprimer(int taille, CLIENT tab[taille],int indice[taille]);
 
 #endif // EN-TETE_H_INCLUDED

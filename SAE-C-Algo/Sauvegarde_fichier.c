@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "en-tete.h"
 
-void sauvegarde(int taille, CLIENT tab[taille], char fichier[40])
+void sauvegarde(int taille, CLIENT tab[taille],int indice[taille], char fichier[40])
 {
     int i;
     FILE * fic = fopen(fichier,"w+");
@@ -14,13 +14,13 @@ void sauvegarde(int taille, CLIENT tab[taille], char fichier[40])
     i=0;
     do
     {
-        fprintf(fic,"%s,",tab[i].prenom);
-        fprintf(fic,"%s,",tab[i].nom);
-        fprintf(fic,"%s,",tab[i].ville);
-        fprintf(fic,"%s,",tab[i].codePostal);
-        fprintf(fic,"%s,",tab[i].tel);
-        fprintf(fic,"%s,",tab[i].mail);
-        fprintf(fic,"%s",tab[i].emploi);
+        fprintf(fic,"%s,",tab[indice[i]].prenom);
+        fprintf(fic,"%s,",tab[indice[i]].nom);
+        fprintf(fic,"%s,",tab[indice[i]].ville);
+        fprintf(fic,"%s,",tab[indice[i]].codePostal);
+        fprintf(fic,"%s,",tab[indice[i]].tel);
+        fprintf(fic,"%s,",tab[indice[i]].mail);
+        fprintf(fic,"%s",tab[indice[i]].emploi);
         fprintf(fic,"\n");
         i++;
     }

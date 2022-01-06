@@ -2,74 +2,76 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Affichage annuaire.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="128" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Filtre.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="314" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Séparation_chaine.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="180" topLine="13" />
-		</Cursor>
-	</File>
 	<File name="modification.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1843" topLine="26" />
+			<Cursor1 position="3676" topLine="76" />
 		</Cursor>
 		<Folding>
-			<Collapse line="5" />
-			<Collapse line="10" />
-			<Collapse line="15" />
-			<Collapse line="20" />
-			<Collapse line="25" />
-			<Collapse line="30" />
-			<Collapse line="35" />
+			<Collapse line="6" />
+			<Collapse line="11" />
+			<Collapse line="16" />
+			<Collapse line="21" />
+			<Collapse line="26" />
+			<Collapse line="31" />
+			<Collapse line="36" />
 		</Folding>
 	</File>
-	<File name="en-tete.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Séparation_chaine.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1741" topLine="51" />
+			<Cursor1 position="180" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Tri indirect.c" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Filtre.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="533" topLine="13" />
+			<Cursor1 position="924" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Tri indirect.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1183" topLine="15" />
 		</Cursor>
 		<Folding>
-			<Collapse line="43" />
-			<Collapse line="61" />
-			<Collapse line="79" />
-			<Collapse line="97" />
-			<Collapse line="115" />
+			<Collapse line="20" />
+			<Collapse line="39" />
+			<Collapse line="58" />
+			<Collapse line="76" />
+			<Collapse line="94" />
+			<Collapse line="112" />
+			<Collapse line="130" />
 		</Folding>
 	</File>
 	<File name="Recherche.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4506" topLine="41" />
+			<Cursor1 position="5219" topLine="3" />
 		</Cursor>
 		<Folding>
 			<Collapse line="5" />
-			<Collapse line="27" />
-			<Collapse line="49" />
-			<Collapse line="71" />
-			<Collapse line="93" />
-			<Collapse line="115" />
-			<Collapse line="137" />
+			<Collapse line="29" />
+			<Collapse line="51" />
+			<Collapse line="73" />
+			<Collapse line="95" />
+			<Collapse line="117" />
+			<Collapse line="139" />
 		</Folding>
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="en-tete.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1449" topLine="24" />
+			<Cursor1 position="2393" topLine="62" />
 		</Cursor>
 	</File>
 	<File name="Sauvegarde_fichier.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="315" topLine="0" />
+			<Cursor1 position="675" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Affichage annuaire.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="132" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1630" topLine="76" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
