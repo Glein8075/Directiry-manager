@@ -2,6 +2,9 @@
 #include <string.h>
 #include "en-tete.h"
 
+
+
+
 void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],int indice[taille])
 {
     int i,j,k,milieu;
@@ -13,9 +16,8 @@ void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],i
         milieu=(i+j)/2;
         if (strcmp(tab[indice[milieu]].nom,mot)==0)
         {
-
             client[k]=milieu;
-            printf("%d",client[k]);
+            printf("c'est fait\n");
             k++;
         }
         if (strcmp(tab[indice[milieu]].nom,mot)<0)
@@ -160,6 +162,8 @@ void rech_emploi(int taille, CLIENT tab[taille], char mot[20], int client[taille
 
 void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[taille])
 {
+    int i;
+    int valider=1;
     int choix;
     char mot[50]="Dupuy";
     printf("RECHERCHE\n\n");
@@ -185,7 +189,6 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
                 rech_prenom(taille,tab,mot,client,indice);}
         break;
         case 2: {tri_indirect_prenom(taille,tab,indice);
-                affichage(taille,tab,indice);
                 rech_nom(taille,tab,mot,client,indice);}
         break;
         case 3: {tri_indirect_prenom(taille,tab,indice);
@@ -204,7 +207,37 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
                 rech_emploi(taille,tab,mot,client,indice);}
         break;
         case 8: break;
-        default: printf("erreur de saisie \n");
+        default: {printf("erreur de saisie \n");
+                 valider=0;}
+    }
+    if(valider==1)
+    {
+        printf("les clients correspondant sont:");
+        i=0;
+        while(client[i]!=-1)
+        {
+            printf("%d: %s,%s,%s,%s,%s,%s,%s \n",client[i]+1,tab[client[i]].prenom,tab[client[i]].nom,tab[client[i]].ville,tab[client[i]].codePostal,tab[client[i]].tel,tab[client[i]].mail,tab[client[i]].emploi);
+            i++;
+        }
+        do
+    {
+        printf("vous voulez:\n\n");
+        printf("Supprimer une personne de l'annuaire ..... 1\n");
+        printf("Modifier les informations d'une personne.. 2\n");
+        printf("Quitter .................................. 3\n");
+        printf("Votre choix : ");
+        scanf("%d", &choix);
+        switch(choix)
+        {
+
+            case 1: supprimer(taille,tab,indice);
+                    break;
+            case 2: modification(taille,tab,indice);
+                    break;
+            case 3: break;
+            default : printf("Erreur de saisie !\n" );
+        }
+    }while(choix!= '3');
     }
 }
 

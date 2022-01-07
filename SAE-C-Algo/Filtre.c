@@ -2,6 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include "en-tete.h"
+#include "Tri_indirect.h"
+
+/**
+:entree tab:tableau de CLIENT
+:entre/sortie indice:tableau d'int
+:entre taille: int
+:entre modif: str
+:Précondition
+:tab est un tableau de "taille" element
+:et indice a la même taille que tab
+:Déclaration
+:i: int
+**/
 
 void filtre_nom(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {

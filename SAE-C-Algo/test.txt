@@ -1,2 +1,0 @@
-Adelaide,Benoit,MARSEILLE,13012,04.16.23.32.39,adelaide.benoit@server.fr,,
-,Dupuy,LYON,69008,04.50.03.11.01,adele.dupuy@server.fr,,

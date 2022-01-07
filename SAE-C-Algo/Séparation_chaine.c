@@ -9,23 +9,22 @@ CLIENT separation(char chaine[300])
     char tab[7][100]={"","","","","","",""};
     i=0;
     j=0;
+    printf("chaine=%s\n",chaine);
     do
     {
         k=0;
         do
         {
             if(chaine[i]!=',')
-            {
-              tab[j][k]=chaine[i];
-              k++;
-              i++;
-            }
+            {tab[j][k]=chaine[i];
+            k++;
+            i++;}
         }
-        while(chaine[i]!=',' && chaine[i]!='\n');
+        while(chaine[i]!=','||chaine[i]=='\n'||chaine[i]=='\0');
         tab[j][k]='\0';
-        i++;
+        if (chaine[i]!='\0')i++;
         j++;
-    }while(chaine[i]!='\0' && chaine[i]!='\n');
+    }while(chaine[i]!='\0');
     strcpy(c.prenom,tab[0]);
     strcpy(c.nom,tab[1]);
     strcpy(c.ville,tab[2]);
@@ -33,6 +32,7 @@ CLIENT separation(char chaine[300])
     strcpy(c.tel,tab[4]);
     strcpy(c.mail,tab[5]);
     strcpy(c.emploi,tab[6]);
+
     return c;
 }
 
