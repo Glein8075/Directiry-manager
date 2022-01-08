@@ -31,7 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Affichage annuaire.c">
+		<Unit filename="Affichage_annuaire.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Affichage_annuaire.h" />
@@ -51,11 +51,11 @@
 		<Unit filename="Séparation_chaine.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Tri indirect.c">
+		<Unit filename="Tri_indirect.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Tri_indirect.h" />
-		<Unit filename="en-tete.h" />
+		<Unit filename="en_tete.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

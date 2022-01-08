@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "en-tete.h"
+#include "en_tete.h"
 
 /**
 :entree tab:tableau de CLIENT
@@ -124,6 +124,4 @@ void supprimer(int taille, CLIENT tab[taille],int indice[taille])
     for (i = choix - 1; i < taille - 1; i++)
          tab[i] = tab[i+1];
     taille--;
-    tab=realloc(tab,taille*sizeof(CLIENT));
-    indice=realloc(indice,taille*sizeof(int));
 }

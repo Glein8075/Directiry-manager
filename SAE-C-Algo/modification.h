@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "en-tete.h"
+#include "en_tete.h"
 
 void modif_nom(int taille, CLIENT tab[taille], char modif[20], int choix);
 

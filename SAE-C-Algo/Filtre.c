@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "en-tete.h"
+#include "en_tete.h"
 #include "Tri_indirect.h"
 
 /**
@@ -19,29 +19,33 @@
 void filtre_nom(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
     int i;
-    if(motif!=NULL)
+    if(strcmp(motif,"\n")!=0)
     {
-        printf("motif n'est pas NULL\n");
-        if(strcmp(motif,"M")>0||strcmp(motif,"m")>0||strcmp(motif,"04")>0)
-        {
-            i=taille-1;
-            while(i>taille/2)
-            {
-                if(strstr(motif,tab[indice[i]].nom))
-                {
-                    printf("%s\n",tab[indice[i]].nom);
-                }
-            }
-        }
-        else
+
+        if(strcmp(motif,"M")<0||strcmp(motif,"04")<0)
         {
             i=0;
             while(i<=taille/2)
             {
-                if(strstr(motif,tab[indice[i]].nom))
+                char *result=strstr(tab[indice[i]].nom,motif);
+                if(result!=NULL)
                 {
                     printf("%s\n",tab[indice[i]].nom);
                 }
+                i++;
+            }
+        }
+        else
+        {
+            i=taille-1;
+            while(i>taille/2)
+            {
+                char *result=strstr(tab[indice[i]].nom,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].nom);
+                }
+                i--;
             }
         }
     }
@@ -90,7 +94,7 @@ void filtre(int taille, CLIENT tab[taille],int indice[taille])
 {
     int choix;
     char rep;
-    char *motif=NULL;
+    char motif[10]="\n";
     printf("FILTRE\n\n");
     printf("Vous flitrez par: \n");
     printf("prenom................... 1\n");
@@ -111,9 +115,8 @@ void filtre(int taille, CLIENT tab[taille],int indice[taille])
     }while(rep!='O' && rep!='N');
     if(rep=='O')
     {
-        motif=calloc(50,sizeof(char));
         printf("saisissez un motif de filtre");
-        fgets(motif,50,stdin);
+        fgets(motif,10,stdin);
     }
     switch(choix)
     {

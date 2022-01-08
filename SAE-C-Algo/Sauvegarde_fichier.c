@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "en-tete.h"
+#include "en_tete.h"
 
 void sauvegarde(int taille, CLIENT tab[taille],int indice[taille], char fichier[40])
 {

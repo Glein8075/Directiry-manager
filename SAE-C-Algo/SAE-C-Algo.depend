@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1641574035 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
+1641640382 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
 	<stdio.h>
 	<stdlib.h>
-	"en-tete.h"
+	"Creation_tableau.h"
+	"en_tete.h"
 	"Affichage_annuaire.h"
 	"Filtre.h"
 	"modification.h"
@@ -11,11 +12,11 @@
 	"Separation_chaine.h"
 	"Tri_indirect.h"
 
-1641567714 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
+1641639567 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	"en-tete.h"
+	"en_tete.h"
 
 1641573007 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage annuaire.c
 	<stdio.h>
@@ -31,15 +32,15 @@
 
 1638526498 D
 
-1641570665 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
+1641634579 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
 	<stdio.h>
 	<stdlib.h>
-	"en-tete.h"
+	"en_tete.h"
 
-1641548531 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
+1641634579 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
 	<stdio.h>
 	<string.h>
-	"en-tete.h"
+	"en_tete.h"
 
 1638526470 
 
@@ -76,51 +77,73 @@
 	<stdio.h>
 	"en-tete.h"
 
-1641574137 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_chaine.c
+1641634482 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_chaine.c
 	<stdio.h>
 	<string.h>
-	"en-tete.h"
+	"en_tete.h"
 
-1641571103 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\filtre.c
+1641638548 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\filtre.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	"en-tete.h"
+	"en_tete.h"
 	"Tri_indirect.h"
 
-1641570785 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.h
+1641634579 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.h
 	<stdio.h>
 	<stdlib.h>
-	"en-tete.h"
+	"en_tete.h"
 
-1641569865 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\filtre.h
+1641635845 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\filtre.h
 	<stdio.h>
 	<stdlib.h>
-	"en-tete.h"
+	"en_tete.h"
 
-1641567853 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.h
+1641634579 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.h
 	<stdio.h>
 	<string.h>
-	"en-tete.h"
+	"en_tete.h"
 
-1641570766 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.h
+1641634579 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.h
 	<stdio.h>
 	<string.h>
-	"en-tete.h"
+	"en_tete.h"
 
-1641570798 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.h
+1641634579 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.h
 	<stdio.h>
 	<stdlib.h>
-	"en-tete.h"
+	"en_tete.h"
 
-1641570814 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\separation_chaine.h
+1641634579 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\separation_chaine.h
 	<stdio.h>
 	<string.h>
-	"en-tete.h"
+	"en_tete.h"
 
-1641571065 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri_indirect.h
+1641634579 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri_indirect.h
 	<stdlib.h>
 	<string.h>
 	<stdio.h>
-	"en-tete.h"
+	"en_tete.h"
+
+1641570938 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\en_tete.h
+
+1641634937 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri_indirect.c
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"en_tete.h"
+
+1641635011 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.c
+	<stdio.h>
+	<stdlib.h>
+	"en_tete.h"
+
+1641640222 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\création_tableau.c
+	<stdio.h>
+	<stdlib.h>
+	"Separation_chaine.h"
+	"en_tete.h"
+
+1641639950 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\creation_tableau.h
+	"en_tete.h"
 

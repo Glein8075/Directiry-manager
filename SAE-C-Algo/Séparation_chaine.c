@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "en-tete.h"
+#include "en_tete.h"
 
 CLIENT separation(char chaine[300])
 {
@@ -9,22 +9,25 @@ CLIENT separation(char chaine[300])
     char tab[7][100]={"","","","","","",""};
     i=0;
     j=0;
-    printf("chaine=%s\n",chaine);
     do
     {
         k=0;
         do
         {
             if(chaine[i]!=',')
-            {tab[j][k]=chaine[i];
-            k++;
-            i++;}
+            {
+                tab[j][k]=chaine[i];
+                k++;
+                i++;
+            }
         }
-        while(chaine[i]!=','||chaine[i]=='\n'||chaine[i]=='\0');
+        while(chaine[i]!=','&& chaine[i]!='\n'&&chaine[i]!='\0');
+
         tab[j][k]='\0';
         if (chaine[i]!='\0')i++;
         j++;
-    }while(chaine[i]!='\0');
+    }
+    while(chaine[i]!='\0');
     strcpy(c.prenom,tab[0]);
     strcpy(c.nom,tab[1]);
     strcpy(c.ville,tab[2]);

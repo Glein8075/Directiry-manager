@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "en-tete.h"
+#include "en_tete.h"
 
 /**
 :entree/sortie tab:tableau de CLIENT
