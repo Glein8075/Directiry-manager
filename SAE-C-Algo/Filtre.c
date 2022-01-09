@@ -62,32 +62,266 @@ void filtre_nom(int taille, CLIENT tab[taille],int indice[taille], char motif[50
 
 void filtre_prenom(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
+    int i;
+    if(strcmp(motif,"\n")!=0)
+    {
 
+        if(strcmp(motif,"M")<0||strcmp(motif,"04")<0)
+        {
+            i=0;
+            while(i<=taille/2)
+            {
+                char *result=strstr(tab[indice[i]].prenom,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].prenom);
+                }
+                i++;
+            }
+        }
+        else
+        {
+            i=taille-1;
+            while(i>taille/2)
+            {
+                char *result=strstr(tab[indice[i]].prenom,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].prenom);
+                }
+                i--;
+            }
+        }
+    }
+    else
+    {
+        i=0;
+        while(i<taille)
+        {
+            printf("%s\n",tab[indice[i]].prenom);
+            i++;
+        }
+    }
 }
 
 void filtre_ville(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
+    int i;
+    if(strcmp(motif,"\n")!=0)
+    {
 
+        if(strcmp(motif,"M")<0||strcmp(motif,"04")<0)
+        {
+            i=0;
+            while(i<=taille/2)
+            {
+                char *result=strstr(tab[indice[i]].ville,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].ville);
+                }
+                i++;
+            }
+        }
+        else
+        {
+            i=taille-1;
+            while(i>taille/2)
+            {
+                char *result=strstr(tab[indice[i]].ville,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].ville);
+                }
+                i--;
+            }
+        }
+    }
+    else
+    {
+        i=0;
+        while(i<taille)
+        {
+            printf("%s\n",tab[indice[i]].ville);
+            i++;
+        }
+    }
 }
 
 void filtre_codePostal(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
+    int i;
+    if(strcmp(motif,"\n")!=0)
+    {
 
+        if(strcmp(motif,"M")<0||strcmp(motif,"04")<0)
+        {
+            i=0;
+            while(i<=taille/2)
+            {
+                char *result=strstr(tab[indice[i]].codePostal,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].codePostal);
+                }
+                i++;
+            }
+        }
+        else
+        {
+            i=taille-1;
+            while(i>taille/2)
+            {
+                char *result=strstr(tab[indice[i]].codePostal,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].codePostal);
+                }
+                i--;
+            }
+        }
+    }
+    else
+    {
+        i=0;
+        while(i<taille)
+        {
+            printf("%s\n",tab[indice[i]].nom);
+            i++;
+        }
+    }
 }
 
 void filtre_tel(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
+    int i;
+    if(strcmp(motif,"\n")!=0)
+    {
 
+        if(strcmp(motif,"M")<0||strcmp(motif,"04")<0)
+        {
+            i=0;
+            while(i<=taille/2)
+            {
+                char *result=strstr(tab[indice[i]].tel,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].tel);
+                }
+                i++;
+            }
+        }
+        else
+        {
+            i=taille-1;
+            while(i>taille/2)
+            {
+                char *result=strstr(tab[indice[i]].tel,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].tel);
+                }
+                i--;
+            }
+        }
+    }
+    else
+    {
+        i=0;
+        while(i<taille)
+        {
+            printf("%s\n",tab[indice[i]].tel);
+            i++;
+        }
+    }
 }
 
 void filtre_mail(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
+    int i;
+    if(strcmp(motif,"\n")!=0)
+    {
 
+        if(strcmp(motif,"M")<0||strcmp(motif,"04")<0)
+        {
+            i=0;
+            while(i<=taille/2)
+            {
+                char *result=strstr(tab[indice[i]].mail,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].mail);
+                }
+                i++;
+            }
+        }
+        else
+        {
+            i=taille-1;
+            while(i>taille/2)
+            {
+                char *result=strstr(tab[indice[i]].mail,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].mail);
+                }
+                i--;
+            }
+        }
+    }
+    else
+    {
+        i=0;
+        while(i<taille)
+        {
+            printf("%s\n",tab[indice[i]].mail);
+            i++;
+        }
+    }
 }
 
 void filtre_emploi(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
+    int i;
+    if(strcmp(motif,"\n")!=0)
+    {
 
+        if(strcmp(motif,"M")<0||strcmp(motif,"04")<0)
+        {
+            i=0;
+            while(i<=taille/2)
+            {
+                char *result=strstr(tab[indice[i]].emploi,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].emploi);
+                }
+                i++;
+            }
+        }
+        else
+        {
+            i=taille-1;
+            while(i>taille/2)
+            {
+                char *result=strstr(tab[indice[i]].emploi,motif);
+                if(result!=NULL)
+                {
+                    printf("%s\n",tab[indice[i]].emploi);
+                }
+                i--;
+            }
+        }
+    }
+    else
+    {
+        i=0;
+        while(i<taille)
+        {
+            printf("%s\n",tab[indice[i]].emploi);
+            i++;
+        }
+    }
 }
 
 void filtre(int taille, CLIENT tab[taille],int indice[taille])
@@ -116,30 +350,44 @@ void filtre(int taille, CLIENT tab[taille],int indice[taille])
     if(rep=='O')
     {
         printf("saisissez un motif de filtre");
-        fgets(motif,10,stdin);
+        scanf("%s",motif);
     }
     switch(choix)
     {
-        case 1: {tri_indirect_prenom(taille,tab,indice);
-                filtre_prenom(taille,tab,indice,motif);}
+        case 1: {
+                tri_indirect_prenom(taille,tab,indice);
+                filtre_prenom(taille,tab,indice,motif);
+                }
         break;
-        case 2: {tri_indirect_nom(taille,tab,indice);
-                filtre_nom(taille,tab,indice,motif);}
+        case 2: {
+                tri_indirect_nom(taille,tab,indice);
+                filtre_nom(taille,tab,indice,motif);
+                }
         break;
-        case 3: {tri_indirect_ville(taille,tab,indice);
-                filtre_ville(taille,tab,indice,motif);}
+        case 3: {
+                tri_indirect_ville(taille,tab,indice);
+                filtre_ville(taille,tab,indice,motif);
+                }
         break;
-        case 4: {tri_indirect_codePostal(taille,tab,indice);
-                filtre_codePostal(taille,tab,indice,motif);}
+        case 4: {
+                tri_indirect_codePostal(taille,tab,indice);
+                filtre_codePostal(taille,tab,indice,motif);
+                }
         break;
-        case 5: {tri_indirect_tel(taille,tab,indice);
-                filtre_tel(taille,tab,indice,motif);}
+        case 5: {
+                tri_indirect_tel(taille,tab,indice);
+                filtre_tel(taille,tab,indice,motif);
+                }
         break;
-        case 6: {tri_indirect_mail(taille,tab,indice);
-                filtre_mail(taille,tab,indice,motif);}
+        case 6: {
+                tri_indirect_mail(taille,tab,indice);
+                filtre_mail(taille,tab,indice,motif);
+                }
         break;
-        case 7: {tri_indirect_emploi(taille,tab,indice);
-                filtre_emploi(taille,tab,indice,motif);}
+        case 7: {
+                tri_indirect_emploi(taille,tab,indice);
+                filtre_emploi(taille,tab,indice,motif);
+                }
         break;
         case 8: break;
         default: printf("erreur de saisie \n");

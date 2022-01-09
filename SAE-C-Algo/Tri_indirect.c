@@ -181,11 +181,3 @@ void tri_indirect(int taille, CLIENT tab[taille],int indice[taille])
         default: printf("erreur de saisie \n");
     }
 }
-
-
-/**int main()
-{
-    ["","Becker","PARIS","75002","01.81.30.33.94","adelaide.becker@server.fr","comptable"]
-    ["Benoit","Lambert","","","04.61.87.21.94","benoit.lambert@server.fr","chef d'entreprise"]
-    ["Capucine","Humbert du Leroux","MARSEILLE","13008","04.13.88.22.43","capucine.humbert-du-leroux@server.fr","barman"]]}
-}*/

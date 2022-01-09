@@ -5,14 +5,13 @@
 /**
 :entree tab:tableau de CLIENT
 :entre/sortie indice:tableau d'int
+:entre/sortie client: tableau d'int
 :entre taille: int
-:entre modif: str
 :Précondition
 :tab est un tableau de "taille" element
-:et indice a la même taille que tab
+:indice est un tableau contenant les indices de tab trié en fonction des éléments de tab
 :Postcondition:
 :le tableau "client" contient les indices des clients correspondant au mot recherché
-:indice est un tableau contenant les indices de tab trié en fonction des éléments de tab
 :Déclaration
 :i,j,k: int
 **/
@@ -38,10 +37,11 @@ void rech_emploi(int taille, CLIENT tab[taille], char mot[20], int client[taille
 :entrée taille: int
 :Précondition
 :tab possede "taille" éléments
+:indice est un tableau contenant les indices de tab trié en fonction des éléments de tab
 :Postcondition:
 :le tableau "client" contient les indices des clients correspondant au mot recherché
-:indice est un tableau contenant les indices de tab trié en fonction des éléments de tab
 :Déclaration
+:valider: int
 :choix: int
 :mot: str
 */

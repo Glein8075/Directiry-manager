@@ -23,7 +23,6 @@ int main()
     getchar();
     CLIENT tab[taille];
     int indice[taille];
-    //creation(taille,tab,indice,annu);
     FILE * fic = fopen(annu,"r+");
     if(fic==NULL)
     {
@@ -44,27 +43,30 @@ int main()
     do
     {
         printf("MENU\n\n");
-        printf("Ajouter une personne a l'annuaire ....... 1\n");
-        printf("Afficher l'annuaire sans filtre ......... 2\n");
-        printf("Afficher l'annuaire avec filtre ......... 3\n");
-        printf("Supprimer une personne de l'annuaire .... 4\n");
-        printf("Rechercher une personne de l'annuaire ... 5\n");
-        printf("Trier ................................... 6\n");
-        printf("Sauvegarder les modifications ........... 7\n");
-        printf("Quitter ................................. 8\n");
+        printf("Ajouter une personne a l'annuaire ........ 1\n");
+        printf("modifier une information d'une personne .. 2\n");
+        printf("Afficher l'annuaire sans filtre .......... 3\n");
+        printf("Afficher l'annuaire avec filtre .......... 4\n");
+        printf("Supprimer une personne de l'annuaire ..... 5\n");
+        printf("Rechercher une personne de l'annuaire .... 6\n");
+        printf("Trier l'annuaire ......................... 7\n");
+        printf("Sauvegarder les modifications ............ 8\n");
+        printf("Quitter .................................. 9\n");
         printf("Votre choix : ");
         scanf("%d", &choix);
         switch(choix)
         {
             case 1: ajouter(taille,tab,indice);
                     break;
-            case 2: affichage(taille,tab,indice);
+            case 2: modification(taille,tab,indice);
                     break;
-            case 3: filtre(taille,tab,indice);
+            case 3: affichage(taille,tab,indice);
                     break;
-            case 4: supprimer(taille,tab,indice);
+            case 4: filtre(taille,tab,indice);
                     break;
-            case 5: {int client[taille];
+            case 5: supprimer(taille,tab,indice);
+                    break;
+            case 6: {int client[taille];
                     int i=0;
                     while(i<taille)
                     {
@@ -74,14 +76,14 @@ int main()
                     }
 
                     break;
-            case 6: tri_indirect(taille,tab,indice);
+            case 7: tri_indirect(taille,tab,indice);
                     break;
-            case 7: sauvegarde(taille,tab,indice,annu);
+            case 8: sauvegarde(taille,tab,indice,annu);
                     break;
-            case 8: break;
+            case 9: break;
             default : printf("Erreur de saisie !\n" );
         }
-    }while(choix!=8);
+    }while(choix!=9);
 
     return 0;
 }

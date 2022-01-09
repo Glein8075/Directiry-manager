@@ -5,9 +5,9 @@
 :entré chaine: str
 :sortie c: CLIENT
 :Postcodition
-: "c" contient les informations sur un client contenu dans "chaine"
+:"c" contient les informations sur un client contenu dans "chaine"
 :Declaration
-: i,j: int
-: tab : tableau de str
+:i,j: int
+:tab : tableau de str
 */
 CLIENT separation(char chaine[300]);

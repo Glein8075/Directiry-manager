@@ -11,6 +11,7 @@
 :taille est la taille du tableau de structure tab
 :indice est unn tableau contenant les indices de tab trié en fonction des éléments de tab
 :Postcondition:
+:création ou modification d'un fichier dans lequel
 :chaque element de tab correspond une ligne de fichier
 */
 void sauvegarde(int taille, CLIENT tab[taille],int indice[taille],char fichier[40]);

@@ -14,7 +14,7 @@ CLIENT separation(char chaine[300])
         k=0;
         do
         {
-            if(chaine[i]!=',')
+            if(chaine[i]!=','&&chaine[i]!='\n')
             {
                 tab[j][k]=chaine[i];
                 k++;

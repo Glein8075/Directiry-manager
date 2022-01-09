@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "en_tete.h"
-
-
-
+#include "Tri_indirect.h"
 
 void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],int indice[taille])
 {
@@ -188,22 +186,22 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
         case 1: {tri_indirect_prenom(taille,tab,indice);
                 rech_prenom(taille,tab,mot,client,indice);}
         break;
-        case 2: {tri_indirect_prenom(taille,tab,indice);
+        case 2: {tri_indirect_nom(taille,tab,indice);
                 rech_nom(taille,tab,mot,client,indice);}
         break;
-        case 3: {tri_indirect_prenom(taille,tab,indice);
+        case 3: {tri_indirect_ville(taille,tab,indice);
                 rech_ville(taille,tab,mot,client,indice);}
         break;
-        case 4: {tri_indirect_prenom(taille,tab,indice);
+        case 4: {tri_indirect_codePostal(taille,tab,indice);
                 rech_codePostal(taille,tab,mot,client,indice);}
         break;
-        case 5: {tri_indirect_prenom(taille,tab,indice);
+        case 5: {tri_indirect_tel(taille,tab,indice);
                 rech_tel(taille,tab,mot,client,indice);}
         break;
-        case 6: {tri_indirect_prenom(taille,tab,indice);
+        case 6: {tri_indirect_mail(taille,tab,indice);
                 rech_mail(taille,tab,mot,client,indice);}
         break;
-        case 7: {tri_indirect_prenom(taille,tab,indice);
+        case 7: {tri_indirect_emploi(taille,tab,indice);
                 rech_emploi(taille,tab,mot,client,indice);}
         break;
         case 8: break;
@@ -212,7 +210,7 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
     }
     if(valider==1)
     {
-        printf("les clients correspondant sont:");
+        printf("les clients correspondant sont:\n");
         i=0;
         while(client[i]!=-1)
         {
@@ -237,7 +235,7 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
             case 3: break;
             default : printf("Erreur de saisie !\n" );
         }
-    }while(choix!= '3');
+    }while(choix!= 3);
     }
 }
 

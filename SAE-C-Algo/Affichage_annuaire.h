@@ -8,7 +8,9 @@
 :entre taille: int
 :Précondition
 :tab est un tableau de "taille" element
-:indice est unn tableau contenant les indices de tab trié en fonction des éléments de tab
+:indice est un tableau contenant les indices de tab trié en fonction des éléments de tab
+:Postcondition
+:affichage des éléments de tab
 :Declaration
 :i:int
 **/

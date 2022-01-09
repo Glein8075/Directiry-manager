@@ -55,10 +55,10 @@ void modification(int taille, CLIENT tab[taille],int indice[taille])
 {
     int c1,c2;
     char modif[30];
-    printf("saisissez le numéro du client que vous voulez modifier");
+    printf("saisissez le numéro du client que vous voulez modifier: ");
     scanf("%d",&c1);
-
-    printf("vous recherchez: \n");
+    printf("%d: %s,%s,%s,%s,%s,%s,%s\n\n",c1,tab[indice[c1-1]].prenom,tab[indice[c1-1]].nom,tab[indice[c1-1]].ville,tab[indice[c1-1]].codePostal,tab[indice[c1-1]].tel,tab[indice[c1-1]].mail,tab[indice[c1-1]].emploi);
+    printf("vous voulez modifier: \n");
     printf("prenom................... 1\n");
     printf("nom ..................... 2\n");
     printf("ville ................... 3\n");
@@ -67,11 +67,11 @@ void modification(int taille, CLIENT tab[taille],int indice[taille])
     printf("mail .................... 6\n");
     printf("emploi .................. 7\n");
     printf("Quitter ................. 8\n");
-    printf("Votre choix (saisissez le numero correspondant):");
+    printf("Votre choix (saisissez le numero correspondant): ");
     scanf("%d", &c2);
     getchar();
-    printf("saisissez la modification");
-    fgets(modif,30,stdin);
+    printf("saisissez la modification: ");
+    scanf("%s",modif);
     switch(c2)
     {
         case 1: modif_prenom(taille,tab,indice,modif,c1);

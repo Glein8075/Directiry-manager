@@ -12,7 +12,7 @@
 :tab est un tableau de "taille" element
 :et indice a la même taille que tab
 :Postcondition
-: indice est trier dans l'ordre des éléments de tab qu'ils représentent
+:indice est trier dans l'ordre des éléments de tab qu'ils représentent
 :Declaration
 :i,j:int
 :ipetit:int
