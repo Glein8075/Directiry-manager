@@ -148,7 +148,13 @@ void tri_indirect_emploi(int taille, CLIENT tab[taille], int indice[taille])
 
 void tri_indirect(int taille, CLIENT tab[taille],int indice[taille])
 {
-    int choix;
+    int i,choix;
+    i=0;
+    while (i<taille)
+    {
+        indice[i]=i;
+        i++;
+    }
     printf("TRI\n\n");
     printf("Vous triez par: \n");
     printf("prenom................... 1\n");

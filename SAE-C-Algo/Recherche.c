@@ -15,14 +15,13 @@ void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],i
         if (strcmp(tab[indice[milieu]].nom,mot)==0)
         {
             client[k]=milieu;
-            printf("c'est fait\n");
             k++;
         }
         if (strcmp(tab[indice[milieu]].nom,mot)<0)
         {
             j=milieu-1;
         }
-        else i=milieu +1;
+        else i=milieu+1;
     }
 }
 
@@ -163,7 +162,7 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
     int i;
     int valider=1;
     int choix;
-    char mot[50]="Dupuy";
+    char mot[50];
     printf("RECHERCHE\n\n");
     printf("vous recherchez: \n");
     printf("prenom................... 1\n");
@@ -177,10 +176,9 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
     printf("Votre choix (saisissez le numero correspondant):");
     scanf("%d", &choix);
     getchar();
-    printf("Saisissez le mot recherché: ");
+    printf("Saisissez le mot recherche: ");
     fgets(mot,50,stdin);
 
-        //faire un case
     switch(choix)
     {
         case 1: {tri_indirect_prenom(taille,tab,indice);
@@ -208,7 +206,7 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
         default: {printf("erreur de saisie \n");
                  valider=0;}
     }
-    if(valider==1)
+    if(valider==1&&client[0]!=-1)
     {
         printf("les clients correspondant sont:\n");
         i=0;
@@ -218,7 +216,7 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
             i++;
         }
         do
-    {
+        {
         printf("vous voulez:\n\n");
         printf("Supprimer une personne de l'annuaire ..... 1\n");
         printf("Modifier les informations d'une personne.. 2\n");
@@ -235,7 +233,8 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
             case 3: break;
             default : printf("Erreur de saisie !\n" );
         }
-    }while(choix!= 3);
+        }while(choix!= 3);
     }
+    else printf("il n'y a pas de client nomme %s\n",mot);
 }
 
