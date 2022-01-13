@@ -16,3 +16,17 @@
 **/
 
 void affichage(int taille, CLIENT tab[taille],int indice[taille]);
+
+/**
+:entree/sortie tab:tableau de CLIENT
+:entre/sortie indice: tableau d'int
+:entre taille: int
+:Précondition
+:tab est un tableau de "taille" element
+:indice est un tableau contenant les indices de tab trié en fonction des éléments de tab
+:Postcondition
+:affichage des éléments de tab contenant des infos vides
+:Declaration
+:i:int
+**/
+void affichage_vide(int taille,CLIENT tab[taille],int indice[taille]);

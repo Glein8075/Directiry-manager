@@ -116,7 +116,7 @@ void ajouter(int taille, CLIENT tab[taille], int indice[taille])
 }
 
 
-void supprimer(int taille, CLIENT tab[taille],int indice[taille])
+int supprimer(int taille, CLIENT tab[taille],int indice[taille])
 {
     int choix,i;
     printf("quel client voulez-vous supprimer ? (saisissez son numéro)");
@@ -124,4 +124,6 @@ void supprimer(int taille, CLIENT tab[taille],int indice[taille])
     for (i = choix - 1; i < taille - 1; i++)
          tab[i] = tab[i+1];
     taille--;
+    printf("client supprime\n");
+    return taille;
 }

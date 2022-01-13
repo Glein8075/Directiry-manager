@@ -26,4 +26,5 @@ void sauvegarde(int taille, CLIENT tab[taille],int indice[taille], char fichier[
     }
     while(i<taille);
     fclose(fic);
+    printf("sauvegarde effectué\n\n");
 }

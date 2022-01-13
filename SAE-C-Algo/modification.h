@@ -70,4 +70,4 @@ void ajouter(int taille, CLIENT tab[taille], int indice[taille]);
 :Déclaration
 :i,choix: int
 */
-void supprimer(int taille, CLIENT tab[taille],int indice[taille]);
+int supprimer(int taille, CLIENT tab[taille],int indice[taille]);

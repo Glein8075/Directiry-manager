@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 #include "en_tete.h"
+#include "modification.h"
 #include "Tri_indirect.h"
 
 void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],int indice[taille])
@@ -12,12 +14,13 @@ void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],i
     while (i<j)
     {
         milieu=(i+j)/2;
+        //printf("comparaison: %d, milieu= %d\n",strcmp(tab[indice[milieu]].nom,mot),milieu);
         if (strcmp(tab[indice[milieu]].nom,mot)==0)
         {
             client[k]=milieu;
             k++;
         }
-        if (strcmp(tab[indice[milieu]].nom,mot)<0)
+        if (strcmp(tab[indice[milieu]].nom,mot)>0)
         {
             j=milieu-1;
         }
@@ -39,7 +42,28 @@ void rech_prenom(int taille, CLIENT tab[taille], char mot[20],int client[taille]
             client[k]=milieu;
             k++;
         }
-        if (strcmp(tab[milieu].prenom,mot)<0)
+        if (strcmp(tab[milieu].prenom,mot)>0)
+        {
+            j=milieu-1;
+        }
+        else i=milieu +1;
+    }
+}
+void rech_codePostal(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille])
+{
+    int i,j,k,milieu;
+    i=0;
+    j=taille;
+    k=0;
+    while (i<j)
+    {
+        milieu=(i+j)/2;
+        if (strcmp(tab[milieu].codePostal,mot)==0)
+        {
+            client[k]=milieu;
+            k++;
+        }
+        if (strcmp(tab[milieu].codePostal,mot)>0)
         {
             j=milieu-1;
         }
@@ -61,36 +85,13 @@ void rech_ville(int taille, CLIENT tab[taille], char mot[20],int client[taille],
             client[k]=milieu;
             k++;
         }
-        if (strcmp(tab[milieu].ville,mot)<0)
+        if (strcmp(tab[milieu].ville,mot)>0)
         {
             j=milieu-1;
         }
         else i=milieu +1;
     }
 }
-
-void rech_codePostal(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille])
-{
-    int i,j,k,milieu;
-    i=0;
-    j=taille;
-    k=0;
-    while (i<j)
-    {
-        milieu=(i+j)/2;
-        if (strcmp(tab[milieu].codePostal,mot)==0)
-        {
-            client[k]=milieu;
-            k++;
-        }
-        if (strcmp(tab[milieu].codePostal,mot)<0)
-        {
-            j=milieu-1;
-        }
-        else i=milieu +1;
-    }
-}
-
 void rech_tel(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille])
 {
     int i,j,k,milieu;
@@ -105,7 +106,7 @@ void rech_tel(int taille, CLIENT tab[taille], char mot[20],int client[taille],in
             client[k]=milieu;
             k++;
         }
-        if (strcmp(tab[milieu].tel,mot)<0)
+        if (strcmp(tab[milieu].tel,mot)>0)
         {
             j=milieu-1;
         }
@@ -127,14 +128,13 @@ void rech_mail(int taille, CLIENT tab[taille], char mot[20],int client[taille],i
             client[k]=milieu;
             k++;
         }
-        if (strcmp(tab[milieu].mail,mot)<0)
+        if (strcmp(tab[milieu].mail,mot)>0)
         {
             j=milieu-1;
         }
         else i=milieu +1;
     }
 }
-
 void rech_emploi(int taille, CLIENT tab[taille], char mot[20], int client[taille],int indice[taille])
 {
     int i,j,k,milieu;
@@ -149,13 +149,15 @@ void rech_emploi(int taille, CLIENT tab[taille], char mot[20], int client[taille
             client[k]=milieu;
             k++;
         }
-        if (strcmp(tab[milieu].emploi,mot)<0)
+        if (strcmp(tab[milieu].emploi,mot)>0)
         {
             j=milieu-1;
         }
         else i=milieu +1;
     }
 }
+
+
 
 void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[taille])
 {
@@ -177,34 +179,69 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
     scanf("%d", &choix);
     getchar();
     printf("Saisissez le mot recherche: ");
-    fgets(mot,50,stdin);
-
+    scanf("%s",mot);
+    i=0;
+    while(i<50)
+    {
+        if(mot[i]=='\n')
+        {
+            mot[i]='\0';
+        }
+        i++;
+    }
+    i=0;
+    while (i<taille)
+    {
+        indice[i]=i;
+        i++;
+    }
     switch(choix)
     {
         case 1: {tri_indirect_prenom(taille,tab,indice);
-                rech_prenom(taille,tab,mot,client,indice);}
-        break;
+                clock_t tic = clock();
+                rech_prenom(taille,tab,mot,client,indice);
+                clock_t toc = clock();
+                printf("Duree recherche : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                break;}
         case 2: {tri_indirect_nom(taille,tab,indice);
-                rech_nom(taille,tab,mot,client,indice);}
-        break;
+                clock_t tic = clock();
+                rech_nom(taille,tab,mot,client,indice);
+                clock_t toc = clock();
+                printf("Duree recherche : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                break;}
         case 3: {tri_indirect_ville(taille,tab,indice);
-                rech_ville(taille,tab,mot,client,indice);}
-        break;
+                clock_t tic = clock();
+                rech_ville(taille,tab,mot,client,indice);
+                clock_t toc = clock();
+                printf("Duree recherche : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                break;}
         case 4: {tri_indirect_codePostal(taille,tab,indice);
-                rech_codePostal(taille,tab,mot,client,indice);}
-        break;
+                clock_t tic = clock();
+                rech_codePostal(taille,tab,mot,client,indice);
+                clock_t toc = clock();
+                printf("Duree recherche : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                break;}
         case 5: {tri_indirect_tel(taille,tab,indice);
-                rech_tel(taille,tab,mot,client,indice);}
-        break;
+                clock_t tic = clock();
+                rech_tel(taille,tab,mot,client,indice);
+                clock_t toc = clock();
+                printf("Duree recherche : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                break;}
         case 6: {tri_indirect_mail(taille,tab,indice);
-                rech_mail(taille,tab,mot,client,indice);}
-        break;
+                clock_t tic = clock();
+                rech_mail(taille,tab,mot,client,indice);
+                clock_t toc = clock();
+                printf("Duree recherche : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                break;}
         case 7: {tri_indirect_emploi(taille,tab,indice);
-                rech_emploi(taille,tab,mot,client,indice);}
-        break;
+                clock_t tic = clock();
+                rech_emploi(taille,tab,mot,client,indice);
+                clock_t toc = clock();
+                printf("Duree recherche : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                break;}
         case 8: break;
-        default: {printf("erreur de saisie \n");
-                 valider=0;}
+        default: printf("erreur de saisie \n");
+                 valider=0;
     }
     if(valider==1&&client[0]!=-1)
     {
@@ -235,6 +272,6 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
         }
         }while(choix!= 3);
     }
-    else printf("il n'y a pas de client nomme %s\n",mot);
+    else printf("aucune information correspond a %s\n",mot);
 }
 

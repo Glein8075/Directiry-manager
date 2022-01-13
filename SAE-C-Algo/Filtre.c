@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "en_tete.h"
 #include "Tri_indirect.h"
 
@@ -103,7 +104,6 @@ void filtre_prenom(int taille, CLIENT tab[taille],int indice[taille], char motif
         }
     }
 }
-
 void filtre_ville(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
     int i;
@@ -186,12 +186,11 @@ void filtre_codePostal(int taille, CLIENT tab[taille],int indice[taille], char m
         i=0;
         while(i<taille)
         {
-            printf("%s\n",tab[indice[i]].nom);
+            printf("%s\n",tab[indice[i]].codePostal);
             i++;
         }
     }
 }
-
 void filtre_tel(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
     int i;
@@ -235,7 +234,6 @@ void filtre_tel(int taille, CLIENT tab[taille],int indice[taille], char motif[50
         }
     }
 }
-
 void filtre_mail(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
     int i;
@@ -326,6 +324,7 @@ void filtre_emploi(int taille, CLIENT tab[taille],int indice[taille], char motif
 
 void filtre(int taille, CLIENT tab[taille],int indice[taille])
 {
+    int i;
     int choix;
     char rep;
     char motif[10]="\n";
@@ -352,43 +351,63 @@ void filtre(int taille, CLIENT tab[taille],int indice[taille])
         printf("saisissez un motif de filtre");
         scanf("%s",motif);
     }
+    i=0;
+    while (i<taille)
+    {
+        indice[i]=i;
+        i++;
+    }
     switch(choix)
     {
         case 1: {
                 tri_indirect_prenom(taille,tab,indice);
+                clock_t tic = clock();
                 filtre_prenom(taille,tab,indice,motif);
-                }
-        break;
+                clock_t toc = clock();
+                printf("Duree filtre : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
         case 2: {
                 tri_indirect_nom(taille,tab,indice);
+                clock_t tic = clock();
                 filtre_nom(taille,tab,indice,motif);
-                }
-        break;
+                clock_t toc = clock();
+                printf("Duree filtre : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
         case 3: {
                 tri_indirect_ville(taille,tab,indice);
+                clock_t tic = clock();
                 filtre_ville(taille,tab,indice,motif);
-                }
-        break;
+                clock_t toc = clock();
+                printf("Duree filtre : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
         case 4: {
                 tri_indirect_codePostal(taille,tab,indice);
+                clock_t tic = clock();
                 filtre_codePostal(taille,tab,indice,motif);
-                }
-        break;
+                clock_t toc = clock();
+                printf("Duree filtre : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
         case 5: {
                 tri_indirect_tel(taille,tab,indice);
+                clock_t tic = clock();
                 filtre_tel(taille,tab,indice,motif);
-                }
-        break;
+                clock_t toc = clock();
+                printf("Duree filtre : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
         case 6: {
                 tri_indirect_mail(taille,tab,indice);
+                clock_t tic = clock();
                 filtre_mail(taille,tab,indice,motif);
-                }
-        break;
+                clock_t toc = clock();
+                printf("Duree filtre : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
         case 7: {
                 tri_indirect_emploi(taille,tab,indice);
+                clock_t tic = clock();
                 filtre_emploi(taille,tab,indice,motif);
-                }
-        break;
+                clock_t toc = clock();
+                printf("Duree filtre : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
         case 8: break;
         default: printf("erreur de saisie \n");
     }

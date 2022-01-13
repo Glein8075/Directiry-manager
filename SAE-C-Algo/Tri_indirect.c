@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <time.h>
 #include "en_tete.h"
 
 /**
@@ -35,7 +36,6 @@ void tri_indirect_nom(int taille, CLIENT tab[taille],int indice[taille])
         i++;
     }
 }
-
 void tri_indirect_prenom(int taille,CLIENT tab[taille],int indice[taille])
 {
     int i,j;
@@ -54,7 +54,6 @@ void tri_indirect_prenom(int taille,CLIENT tab[taille],int indice[taille])
         i++;
     }
 }
-
 void tri_indirect_ville(int taille, CLIENT tab[taille], int indice[taille])
 {
         int i,j;
@@ -169,20 +168,41 @@ void tri_indirect(int taille, CLIENT tab[taille],int indice[taille])
     scanf("%d", &choix);
     switch(choix)
     {
-        case 1: tri_indirect_prenom(taille,tab,indice);
-        break;
-        case 2: tri_indirect_nom(taille,tab,indice);
-        break;
-        case 3: tri_indirect_ville(taille,tab,indice);
-        break;
-        case 4: tri_indirect_codePostal(taille,tab,indice);
-        break;
-        case 5: tri_indirect_tel(taille,tab,indice);
-        break;
-        case 6: tri_indirect_mail(taille,tab,indice);
-        break;
-        case 7: tri_indirect_emploi(taille,tab,indice);
-        break;
+        case 1: {clock_t tic = clock();
+                tri_indirect_prenom(taille,tab,indice);
+                clock_t toc = clock();
+                printf("Duree tri : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                break;}
+        case 2: {clock_t tic = clock();
+                tri_indirect_nom(taille,tab,indice);
+                clock_t toc = clock();
+                printf("Duree tri : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
+        case 3: {clock_t tic = clock();
+                tri_indirect_ville(taille,tab,indice);
+                clock_t toc = clock();
+                printf("Duree tri : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
+        case 4: {clock_t tic = clock();
+                tri_indirect_codePostal(taille,tab,indice);
+                clock_t toc = clock();
+                printf("Duree tri : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
+        case 5: {clock_t tic = clock();
+                tri_indirect_tel(taille,tab,indice);
+                clock_t toc = clock();
+                printf("Duree tri : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
+        case 6: {clock_t tic = clock();
+                tri_indirect_mail(taille,tab,indice);
+                clock_t toc = clock();
+                printf("Duree tri : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
+        case 7: {clock_t tic = clock();
+                tri_indirect_emploi(taille,tab,indice);
+                clock_t toc = clock();
+                printf("Duree tri : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+        break;}
         case 8: break;
         default: printf("erreur de saisie \n");
     }

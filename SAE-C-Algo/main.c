@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "en_tete.h"
 #include "Affichage_annuaire.h"
 #include "Filtre.h"
@@ -30,6 +31,7 @@ int main()
         exit(EXIT_FAILURE);
     }
     i=0;
+    clock_t tic = clock();
     do
     {
         fgets(chaine, 200, fic);
@@ -38,20 +40,23 @@ int main()
         i++;
     }while(!feof(fic));
     fclose(fic);
-    affichage(taille,tab,indice);
+    printf("annuaire chargé\n");
+    clock_t toc = clock();
+    printf("Duree creation du tableau : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
     int choix;
     do
     {
         printf("MENU\n\n");
-        printf("Ajouter une personne a l'annuaire ........ 1\n");
-        printf("modifier une information d'une personne .. 2\n");
-        printf("Afficher l'annuaire sans filtre .......... 3\n");
-        printf("Afficher l'annuaire avec filtre .......... 4\n");
-        printf("Supprimer une personne de l'annuaire ..... 5\n");
-        printf("Rechercher une personne de l'annuaire .... 6\n");
-        printf("Trier l'annuaire ......................... 7\n");
-        printf("Sauvegarder les modifications ............ 8\n");
-        printf("Quitter .................................. 9\n");
+        printf("Ajouter une personne a l'annuaire ............ 1\n");
+        printf("modifier une information d'une personne ...... 2\n");
+        printf("Afficher l'annuaire sans filtre .............. 3\n");
+        printf("Afficher les personnes avec des infos vides .. 4\n");
+        printf("Afficher l'annuaire avec filtre .............. 5\n");
+        printf("Supprimer une personne de l'annuaire ......... 6\n");
+        printf("Rechercher une personne de l'annuaire ........ 7\n");
+        printf("Trier l'annuaire ............................. 8\n");
+        printf("Sauvegarder les modifications ................ 9\n");
+        printf("Quitter ...................................... 10\n");
         printf("Votre choix : ");
         scanf("%d", &choix);
         switch(choix)
@@ -60,13 +65,18 @@ int main()
                     break;
             case 2: modification(taille,tab,indice);
                     break;
-            case 3: affichage(taille,tab,indice);
+            case 3: {tic = clock();
+                    affichage(taille,tab,indice);
+                    toc = clock();
+                    printf("Duree affichage : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
+                    break;}
+            case 4: affichage_vide(taille,tab,indice);
                     break;
-            case 4: filtre(taille,tab,indice);
+            case 5: filtre(taille,tab,indice);
                     break;
-            case 5: supprimer(taille,tab,indice);
+            case 6: taille=supprimer(taille,tab,indice);
                     break;
-            case 6: {int client[taille];
+            case 7: {int client[taille];
                     int i=0;
                     while(i<taille)
                     {
@@ -76,14 +86,14 @@ int main()
                     }
 
                     break;
-            case 7: tri_indirect(taille,tab,indice);
+            case 8: tri_indirect(taille,tab,indice);
                     break;
-            case 8: sauvegarde(taille,tab,indice,annu);
+            case 9: sauvegarde(taille,tab,indice,annu);
                     break;
-            case 9: break;
+            case 10: break;
             default : printf("Erreur de saisie !\n" );
         }
-    }while(choix!=9);
+    }while(choix!=10);
 
     return 0;
 }

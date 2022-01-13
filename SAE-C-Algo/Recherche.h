@@ -16,19 +16,20 @@
 :i,j,k: int
 **/
 
-void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille]);
+void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],int indice[taille]);
 
-void rech_prenom(int taille, CLIENT tab[taille], char mot[20],int client[taille]);
+void rech_prenom(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille]);
 
-void rech_ville(int taille, CLIENT tab[taille], char mot[20],int client[taille]);
+void rech_ville(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille]);
 
-void rech_codePostal(int taille, CLIENT tab[taille], char mot[20],int client[taille]);
+void rech_codePostal(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille]);
 
-void rech_tel(int taille, CLIENT tab[taille], char mot[20],int client[taille]);
+void rech_tel(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille]);
 
-void rech_mail(int taille, CLIENT tab[taille], char mot[20],int client[taille]);
+void rech_mail(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille]);
 
-void rech_emploi(int taille, CLIENT tab[taille], char mot[20], int client[taille]);
+void rech_emploi(int taille, CLIENT tab[taille], char mot[20],int client[taille],int indice[taille]);
+
 
 /**
 :entrée/sortie tab: tableau de CLIENT
