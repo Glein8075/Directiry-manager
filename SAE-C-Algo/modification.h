@@ -56,7 +56,7 @@ void modification(int taille, CLIENT tab[taille],int indice[taille]);
 :Postcondition:
 :ajout d'un nouvelle élément dans tab
 */
-void ajouter(int taille, CLIENT tab[taille], int indice[taille]);
+int ajouter(int taille, CLIENT tab[taille], int indice[taille]);
 
 /**
 :entrée/sortie tab: tableau de CLIENT

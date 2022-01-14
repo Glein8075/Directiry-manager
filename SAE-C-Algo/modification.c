@@ -93,7 +93,7 @@ void modification(int taille, CLIENT tab[taille],int indice[taille])
     }
 }
 
-void ajouter(int taille, CLIENT tab[taille], int indice[taille])
+int ajouter(int taille, CLIENT tab[taille], int indice[taille])
 {
     taille++;
     tab=realloc(tab,taille*sizeof(CLIENT));
@@ -113,6 +113,7 @@ void ajouter(int taille, CLIENT tab[taille], int indice[taille])
     fgets(tab[indice[taille]].mail,20,stdin);
     printf("saisissez un emploi/metier: ");
     fgets(tab[indice[taille]].emploi,20,stdin);
+    return taille;
 }
 
 
@@ -127,3 +128,5 @@ int supprimer(int taille, CLIENT tab[taille],int indice[taille])
     printf("client supprime\n");
     return taille;
 }
+
+//responsable de la fonction: Valentin SEGALLA

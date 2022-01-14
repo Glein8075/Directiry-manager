@@ -14,7 +14,6 @@ void rech_nom(int taille, CLIENT tab[taille], char mot[20], int client[taille],i
     while (i<j)
     {
         milieu=(i+j)/2;
-        //printf("comparaison: %d, milieu= %d\n",strcmp(tab[indice[milieu]].nom,mot),milieu);
         if (strcmp(tab[indice[milieu]].nom,mot)==0)
         {
             client[k]=milieu;
@@ -275,3 +274,4 @@ void recherche(int taille, CLIENT tab[taille], int client[taille],int indice[tai
     else printf("aucune information correspond a %s\n",mot);
 }
 
+//responsable de la fonction: Valentin SEGALLA

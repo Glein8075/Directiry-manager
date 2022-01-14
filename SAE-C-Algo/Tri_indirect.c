@@ -207,3 +207,5 @@ void tri_indirect(int taille, CLIENT tab[taille],int indice[taille])
         default: printf("erreur de saisie \n");
     }
 }
+
+//responsable de la fonction: Valentin SEGALLA

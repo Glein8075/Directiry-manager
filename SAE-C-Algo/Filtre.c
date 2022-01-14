@@ -147,7 +147,6 @@ void filtre_ville(int taille, CLIENT tab[taille],int indice[taille], char motif[
         }
     }
 }
-
 void filtre_codePostal(int taille, CLIENT tab[taille],int indice[taille], char motif[50])
 {
     int i;
@@ -412,3 +411,5 @@ void filtre(int taille, CLIENT tab[taille],int indice[taille])
         default: printf("erreur de saisie \n");
     }
 }
+
+//responsable de la fonction: Valentin SEGALLA

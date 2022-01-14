@@ -39,4 +39,4 @@ CLIENT separation(char chaine[300])
     return c;
 }
 
-
+//responsable de la fonction: Valentin SEGALLA

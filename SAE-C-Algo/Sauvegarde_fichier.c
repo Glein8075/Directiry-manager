@@ -28,3 +28,5 @@ void sauvegarde(int taille, CLIENT tab[taille],int indice[taille], char fichier[
     fclose(fic);
     printf("sauvegarde effectué\n\n");
 }
+
+//responsable de la fonction: Valentin SEGALLA

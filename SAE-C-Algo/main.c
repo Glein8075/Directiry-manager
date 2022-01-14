@@ -61,7 +61,7 @@ int main()
         scanf("%d", &choix);
         switch(choix)
         {
-            case 1: ajouter(taille,tab,indice);
+            case 1: taille=ajouter(taille,tab,indice);
                     break;
             case 2: modification(taille,tab,indice);
                     break;

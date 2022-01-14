@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1642106096 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
+1642162012 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -12,7 +12,7 @@
 	"Separation_chaine.h"
 	"Tri_indirect.h"
 
-1642070391 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
+1642162772 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -32,12 +32,12 @@
 
 1638526498 D
 
-1641893784 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
+1642160524 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\sauvegarde_fichier.c
 	<stdio.h>
 	<stdlib.h>
 	"en_tete.h"
 
-1642108438 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
+1642161634 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
 	<stdio.h>
 	<string.h>
 	<time.h>
@@ -80,12 +80,12 @@
 	<stdio.h>
 	"en-tete.h"
 
-1641735398 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_chaine.c
+1642160503 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\séparation_chaine.c
 	<stdio.h>
 	<string.h>
 	"en_tete.h"
 
-1642106702 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\filtre.c
+1642160821 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\filtre.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -103,7 +103,7 @@
 	<stdlib.h>
 	"en_tete.h"
 
-1641893065 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.h
+1642162648 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.h
 	<stdio.h>
 	<string.h>
 	"en_tete.h"
@@ -131,16 +131,17 @@
 
 1641570938 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\en_tete.h
 
-1642105416 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri_indirect.c
+1642160488 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\tri_indirect.c
 	<stdlib.h>
 	<string.h>
 	<stdio.h>
 	<time.h>
 	"en_tete.h"
 
-1642090738 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.c
+1642161023 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"en_tete.h"
 
 1641640222 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\création_tableau.c
