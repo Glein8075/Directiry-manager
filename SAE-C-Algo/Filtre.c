@@ -349,6 +349,7 @@ void filtre(int taille, CLIENT tab[taille],int indice[taille])
     {
         printf("saisissez un motif de filtre");
         scanf("%s",motif);
+        getchar();
     }
     i=0;
     while (i<taille)
