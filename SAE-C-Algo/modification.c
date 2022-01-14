@@ -3,18 +3,6 @@
 #include <string.h>
 #include "en_tete.h"
 
-/**
-:entree tab:tableau de CLIENT
-:entre/sortie indice:tableau d'int
-:entre taille: int
-:entre modif: str
-:entre choix: int
-:Précondition
-:tab est un tableau de "taille" element
-:et indice a la même taille que tab
-:Postcondition
-: modif est dans la structure de l'element d'indice choix-1 de tab
-**/
 
 void modif_nom(int taille, CLIENT tab[taille],int indice[taille], char modif[30], int choix)
 {
@@ -97,6 +85,7 @@ int ajouter(int taille, CLIENT tab[taille], int indice[taille])
 {
     taille++;
     tab=realloc(tab,taille*sizeof(CLIENT));
+    printf("j'y suis\n");
     indice=realloc(indice,taille*sizeof(int));
     indice[taille-1]=taille-1;
     printf("saisissez un nom: ");

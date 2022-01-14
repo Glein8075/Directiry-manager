@@ -32,7 +32,7 @@ void modif_emploi(int taille, CLIENT tab[taille], char modif[20], int choix);
 
 /**
 :entrée/sortie tab: tableau de CLIENT
-:entrée/sortie indice: tableau d'int
+:entrée indice: tableau d'int
 :entrée taille: int
 :Précondition
 :tab possede "taille" éléments
@@ -49,7 +49,7 @@ void modification(int taille, CLIENT tab[taille],int indice[taille]);
 /**
 :entrée/sortie tab: tableau de CLIENT
 :entrée/sortie indice: tableau d'int
-:entrée taille: int
+:entrée/sortie taille: int
 :Précondition
 :tab possede "taille" éléments
 :indice est un tableau contenant les indices de tab trié en fonction des éléments de tab
@@ -61,7 +61,7 @@ int ajouter(int taille, CLIENT tab[taille], int indice[taille]);
 /**
 :entrée/sortie tab: tableau de CLIENT
 :entrée/sortie indice: tableau d'int
-:entrée taille: int
+:entrée/sortie taille: int
 :Précondition
 :tab possede "taille" éléments
 :indice est un tableau contenant les indices de tab trié en fonction des éléments de tab

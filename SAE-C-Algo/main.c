@@ -40,7 +40,7 @@ int main()
         i++;
     }while(!feof(fic));
     fclose(fic);
-    printf("annuaire chargé\n");
+    printf("annuaire charge\n");
     clock_t toc = clock();
     printf("Duree creation du tableau : %lf ms\n",((double)(toc - tic) / CLOCKS_PER_SEC) * 1000);
     int choix;

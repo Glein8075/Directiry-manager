@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1642162012 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
+1642175280 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -12,7 +12,7 @@
 	"Separation_chaine.h"
 	"Tri_indirect.h"
 
-1642162772 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
+1642175104 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -37,7 +37,7 @@
 	<stdlib.h>
 	"en_tete.h"
 
-1642161634 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
+1642175311 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\recherche.c
 	<stdio.h>
 	<string.h>
 	<time.h>
@@ -93,7 +93,7 @@
 	"en_tete.h"
 	"Tri_indirect.h"
 
-1641898657 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.h
+1642174937 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.h
 	<stdio.h>
 	<stdlib.h>
 	"en_tete.h"
@@ -103,7 +103,7 @@
 	<stdlib.h>
 	"en_tete.h"
 
-1642162648 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.h
+1642175110 c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\modification.h
 	<stdio.h>
 	<string.h>
 	"en_tete.h"
@@ -138,7 +138,7 @@
 	<time.h>
 	"en_tete.h"
 
-1642161023 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.c
+1642174934 source:c:\users\lenovo\documents\iut\sae\sae c\sae_c_algo\sae-c-algo\affichage_annuaire.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
